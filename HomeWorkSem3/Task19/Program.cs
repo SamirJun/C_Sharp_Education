@@ -28,13 +28,13 @@ void Palindrom(int arg)
 Console.Clear();
 Console.WriteLine("Wellcome Palindrom");
 string stop = "go";
-while (stop.ToLower() != "break")
+while (stop.ToLower() != "q")
 {
     Console.Write("Введите пятизначное число: ");
     int number = Convert.ToInt32(Console.ReadLine());
 
     Palindrom(number);
-    Console.WriteLine("Если вы желаете выйти из программы введите слово break");
+    Console.WriteLine("Если вы желаете выйти из программы введите 'Q' или нажмите 'Enter' чтобы продолжить");
     stop = Console.ReadLine();
     Console.WriteLine("");
 }
