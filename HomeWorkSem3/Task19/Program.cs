@@ -26,7 +26,7 @@ void Palindrom(int arg)
 
 
 Console.Clear();
-Console.WriteLine("Wellcome Palindrom");
+Console.WriteLine("Welcome Палиндром");
 string stop = "go";
 while (stop.ToLower() != "q")
 {
