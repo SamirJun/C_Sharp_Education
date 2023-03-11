@@ -81,7 +81,8 @@ double Mediana(int[] array)
     if(array.Length%2 == 0)
     {
         int center = array.Length/2;
-        double result = (array[center - 1] + array[center])/2;
+        int n = array[center - 1] + array[center];
+        double result = Convert.ToDouble(n) / 2;
         return result;
     }
     else
