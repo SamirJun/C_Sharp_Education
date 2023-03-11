@@ -94,8 +94,6 @@ double Mediana(int[] array)
 
 
 
-
-
 Console.Write("Введите количесво элементов массива: ");
 int N = Convert.ToInt32(Console.ReadLine());
 
