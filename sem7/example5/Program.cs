@@ -51,7 +51,7 @@ void Sort (int [] arrayline)
             // (arrayline[i],arrayline[arrayline.Length-1-i]) = (arrayline[arrayline.Length-1-i],arrayline[i]);
             
             int n = 0;
-            if (arrayline[i]>arrayline[i+1])
+            if (arrayline[i]<arrayline[i+1])
             {
                 n = arrayline[i+1];
                 arrayline[i+1] = arrayline[i];
