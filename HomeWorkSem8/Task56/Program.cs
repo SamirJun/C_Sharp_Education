@@ -6,7 +6,7 @@
 // 5 2 6 7
 // Программа считает сумму элементов в каждой строке и выдаёт номер строки с наименьшей суммой элементов: 1 строка
 
-
+// Заполняет матрицу
 void FillArray(int[,] array)
 {
     for(int i = 0; i< array.GetLength(0); i++)
@@ -17,7 +17,7 @@ void FillArray(int[,] array)
         }
     }
 }
-
+// Печатает матрицу
 void PrintArray(int[,] array)
 {
     for(int i = 0; i< array.GetLength(0); i++)
@@ -29,13 +29,21 @@ void PrintArray(int[,] array)
         Console.WriteLine();
     }
 }
-
+// Метода ввода с клавиатуры
 int KeyboardInput (string comment)
 {
     Console.Write(comment);
     return Convert.ToInt32(Console.ReadLine());
 }
-
+// Метода для вывода одномерного массива(использую для проверки правильности подсчета суммы)
+void PrintStringArray (int [] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.WriteLine ($"Сумма строки {i+1} = {array[i],2}");
+    }
+}
+// Метод подсчета суммы построчно
 int[] SumToLower (int[,] array)
 {   int [] summa = new int [array.GetLength(0)];
     for(int i = 0; i< array.GetLength(0); i++)
@@ -49,7 +57,7 @@ int[] SumToLower (int[,] array)
     }
     return summa;
 }
-
+// Метод сравнения суммы элементов каждой строки и вывода на экран строки с минимальной суммой
 void Minimum (int [] array)
 {
     int min = array[0];
@@ -63,8 +71,8 @@ void Minimum (int [] array)
             index = i;
         }
         
-    }   
-    Console.WriteLine($"Строка с наименьшей суммой элементов - {index+1}");
+    } 
+    Console.WriteLine($"Строка с наименьшей суммой элементов - {index + 1}");
 }
     
 int rows = KeyboardInput("Введите колличество строк ");
@@ -74,4 +82,6 @@ int[,] array = new int [rows,colms];
 FillArray(array);
 PrintArray(array);
 int [] sum = SumToLower(array);
+PrintStringArray(sum);
+Console.WriteLine();
 Minimum(sum);

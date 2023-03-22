@@ -53,10 +53,6 @@ void PrintIndex(int[,,] array)
     }
 }
 
-
-
-
-
 int[,,] array = new int[2, 2, 2];
 FillArray(array);
 PrintIndex(array);
